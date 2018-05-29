@@ -1,0 +1,16 @@
+<h1 style="text-align:center">Collections</h1>
+<hr>
+
+{{#each collections as |collection|}}
+   <div class="col-lg-6 box">
+    <h3 data-id="{{collections.id}}"> </h3>
+    <h4><a {{collection.parts}}>{{#if collection.collection_name}}
+      {{collection.collection_name}}
+    {{else}}
+      No Collection
+    {{/if}}
+  </a></h4>
+    </div>
+  </div>
+
+  {{/each}}
