@@ -2,14 +2,42 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
 
-.content{
-  width: 75vw;
-  height: 75vh;
-  border: 1px solid black;
+.content-box{
+  border: 1px solid rgba(0, 0, 0, .4);
+  background: white;
+  width: 10px;
+  height: 450px;
+  overflow-y: scroll;
+  // z-index: 1000;
+  transition: .7s ease;
+  position: fixed;
+  margin-top: 25px;
 }
+
+.big-box{
+  width:95%;
+  height:85vh;
+  border: 1px solid black;
+  text-align: center;
+  margin: 0 auto;
+}
+.content-box:hover{
+  width:350px;
+  box-shadow: 1px 1px 30px rgba(0, 0, 0, .5);
+  transition: .7s ease;
+}
+
 
 .box{
   width: 25vw;
   height: 25vh;
   border: 1px solid black;
+}
+
+.part-content {
+  // max-width: 100%;
+  height: 75vh;
+  overflow-y: scroll;
+  border: 1px solid black;
+  // z-index: -1;
 }

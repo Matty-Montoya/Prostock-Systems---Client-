@@ -4,7 +4,7 @@ const api = require('./api')
 const ui = require('./ui')
 
 const addHandlers = () => {
-  $('#get-collections').on('click', onGetCollections)
+  $('#sign-in').on('submit', onGetCollections)
 }
 
 const onGetCollections = (event) => {
