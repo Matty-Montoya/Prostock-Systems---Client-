@@ -2,6 +2,13 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
 
+.another{
+  width: 700px;
+  height: 500px;
+  overflow-y: scroll;
+  margin: 0 auto;
+}
+
 .status{
   text-align: center;
   font-size: 20px;

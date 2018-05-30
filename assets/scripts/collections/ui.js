@@ -10,7 +10,7 @@ const getCollectionsSuccess = function (data) {
     }
   }
   const showCollectionHTML = showCollectionTemplate({collections: data.collections})
-  $('.collection-content').html(showCollectionHTML)
+  $('.part-content').html(showCollectionHTML)
 }
 
 module.exports = {

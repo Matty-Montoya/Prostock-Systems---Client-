@@ -1,16 +1,23 @@
 
 {{#each collections as |collection|}}
-  <div>
+  <div class="another">
     <p data-id="{{collection.id}}"> </p>
-    <p class="text-center">
-      <a class="get-part" {{collections.parts}} >
+    <h3 class="text-center">
         {{#if collection.collection_name}}
           {{collection.collection_name}}
         {{else}}
           No Collection
           {{/if}}
-      </a>
-    </p>
+    </h3>
+    <div>
+      {{#each parts as |part|}}
+        <p>SKU: {{part.sku}}</p>
+        <p>Name: {{part.name}}</p>
+        <p>Description: {{part.description}}</p>
+        <p>Quantity: {{part.quantity}}</p>
+              <hr>
+      {{/each}}
+    </div>
   </div>
   <hr>
 {{/each}}
