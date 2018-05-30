@@ -1,14 +1,16 @@
 
 {{#each collections as |collection|}}
-   <div>
-    <p data-id="{{collections.id}}"> </p>
-    <p class="text-center"><a id="get-part">{{#if collection.collection_name}}
-      {{collection.collection_name}}
-    {{else}}
-      No Collection
-    {{/if}}
-  </a></p>
-    </div>
+  <div>
+    <p data-id="{{collection.id}}"> </p>
+    <p class="text-center">
+      <a class="get-part" >
+        {{#if collection.collection_name}}
+          {{collection.collection_name}}
+        {{else}}
+          No Collection
+          {{/if}}
+      </a>
+    </p>
   </div>
   <hr>
-  {{/each}}
+{{/each}}

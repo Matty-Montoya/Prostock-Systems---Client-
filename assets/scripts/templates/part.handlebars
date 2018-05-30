@@ -1,1 +1,35 @@
-,
+
+{{#each parts as |part|}}
+   <div>
+    <p data-id="{{part.id}}"></p>
+    <p> Sku:
+      {{#if part.sku}}
+      {{part.sku}}
+    {{else}}
+      No SKU Provided
+    {{/if}}
+    </p>
+    <p> Name:
+      {{#if part.name}}
+      {{part.name}}
+    {{else}}
+      No Name Provided
+    {{/if}}
+    </p>
+    <p> Description:
+      {{#if part.description}}
+      {{part.description}}
+    {{else}}
+      No Description Provided
+    {{/if}}
+    </p>
+    <p> Quantity:
+      {{#if part.quantity}}
+      {{part.quantity}}
+    {{else}}
+      No Quantity Provided
+    {{/if}}
+    </p>
+    </div>
+    <hr>
+    {{/each}}
