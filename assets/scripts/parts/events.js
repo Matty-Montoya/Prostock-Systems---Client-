@@ -45,7 +45,6 @@ const onLoadParts = (event) => {
 const onGetParts = (event) => {
   api.getParts()
     .then(ui.getPartsSuccess)
-    .then(ui.getPartsFailure)
 }
 
 const onUpdatePart = (event) => {

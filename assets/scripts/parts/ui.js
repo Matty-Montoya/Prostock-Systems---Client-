@@ -1,7 +1,6 @@
 const showPartTemplate = require('../templates/part.handlebars')
 
 const getPartsSuccess = function (data) {
-  console.log(data)
   const showPartHTML = showPartTemplate({parts: data.parts})
   $('.part-content').html(showPartHTML)
   $('.status2').text('Successfully loaded your inventory!')
@@ -19,7 +18,7 @@ const loadPartSuccess = function (data) {
   }
 }
 
-const getPartsFailure = function () {
+const getPartsFailure = function (data) {
   $('.status2').text('Had an error loading your inventory!')
   setTimeout(() => $('.status2').text(''), 3000)
 }

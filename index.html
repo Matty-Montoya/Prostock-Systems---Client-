@@ -4,6 +4,7 @@
       <title>[Pro]Stock Systems</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
+      <link href="https://fonts.googleapis.com/css?family=Coda+Caption:800" rel="stylesheet">
       <!-- Do not add `link` tags-->
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
@@ -39,7 +40,7 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  <h4 class="modal-title" id="myModalLabel">Log In!</h4>
+                  <h4 class="modal-title coda" id="myModalLabel">Log In!</h4>
                 </div>
                 <div class="modal-body">
                   <form id="sign-in">
@@ -64,7 +65,7 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  <h4 class="modal-title" id="myModalLabel">Sign Up!</h4>
+                  <h4 class="modal-title coda" id="myModalLabel">Sign Up!</h4>
                 </div>
                 <div class="modal-body">
                   <form id="sign-up">
@@ -91,7 +92,7 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  <h4 class="modal-title" id="myModalLabel">Change Password</h4>
+                  <h4 class="modal-title coda" id="myModalLabel">Change Password</h4>
                 </div>
                 <div class="modal-body">
                   <form id="change-password">
@@ -135,23 +136,24 @@
   </div>
 
 <section>
-  <div class="content-box hidden">
-    <h3>Inventory Controls</h3>
-    <hr>
-    <ul class="nav nav-tabs">
-      <li role="presentation" class="active">
-        <a data-toggle="tab" id="create-inventory" href="#create-tab">Create</a>
-          <div id="create-tab">
-            <form id="create-part" class="hidden">
+  <div class="row content-box hidden"
+    <div class="">
+      <h3 class="coda">Inventory Controls</h3>
+      <hr>
+      <ul class="nav nav-tabs">
+        <li role="presentation" class="active">
+          <a data-toggle="tab" class="coda" id="create-inventory" href="#create-tab">Create</a>
+            <div id="create-tab">
+            <form id="create-part">
                 <p>Name: <input required type="text" name="part[name]" placeholder="Part Name"> </p>
                 <p>Description: <input required type="text" name="part[description]" placeholder="Description"> </p>
                 <p>SKU: <input required type="text" name="part[sku]" placeholder="SKU"> </p>
-                <p>Quantity: <input required type="text" name="part[quantity]" placeholder="Quantity"> </p>
+                <p>Quantity: <input required type="text" name="part[quantity]" placeholder="Quantity (Ex: 34, 500, -2)"> </p>
                 <br>
                 <input type="submit" value="Create Part">
             </form>
           </div>
-      </li>
+        </li>
       <!-- <li role="presentation">
         <a id="update-inventory" href="#update-part">Update</a>
           <div id="update-tab">
@@ -174,14 +176,14 @@
         <input type="submit" value="Destroy Part">
         </form>
       </li> -->
-    </ul>
-  </div>
+      </ul>
+    </div>
 </section>
 
 
 <div class="inventory hidden">
   <div class="row">
-  <h3>Inventory</h3>
+  <h3 class="coda">Inventory</h3>
   </div>
   <div class="part-content">
   </div>
