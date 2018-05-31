@@ -125,18 +125,52 @@
 
   </div>
 
-<aside class="content-box hidden">
-  <div class=" col-lg-12 col-xs-12">
-    <h3 style="text-align:center">Collections</h3>
+<section>
+  <div class="content-box hidden">
+    <h3>Inventory Controls</h3>
     <hr>
+    <ul class="nav nav-tabs">
+      <li role="presentation" class="active">
+        <a data-toggle="tab" id="create-inventory" href="#create-tab">Create</a>
+          <div id="create-tab">
+            <form id="create-part" class="hidden">
+                <p>Name: <input required type="text" name="part[name]" placeholder="Part Name"> </p>
+                <p>Description: <input required type="text" name="part[description]" placeholder="Description"> </p>
+                <p>SKU: <input required type="text" name="part[sku]" placeholder="SKU"> </p>
+                <p>Quantity: <input required type="text" name="part[quantity]" placeholder="Quantity"> </p>
+                <br>
+                <input type="submit" value="Create Part">
+            </form>
+          </div>
+      </li>
+      <li role="presentation">
+        <a id="update-inventory" href="#update-part">Update</a>
+          <div id="update-tab">
+            <form id="update-part" class="hidden">
+              <p>Id: <input required type="text" name="part[id]" placeholder="ID"></p>
+              <p>Name: <input required type="text" name="part[name]" placeholder="Part Name"> </p>
+              <p>Description: <input required type="text" name="part[description]" placeholder="Description"> </p>
+              <p>SKU: <input required type="text" name="part[sku]" placeholder="SKU"> </p>
+              <p>Quantity: <input required type="text" name="part[quantity]" placeholder="Quantity"> </p>
+              <br>
+              <input type="submit" value="Update Part">
+            </form>
+          </div>
+      </li>
+
+      <li role="presentation">
+        <a id="destroy-inventory" href="#destroy-part">Delete</a>
+        <form id="destroy-part" class="hidden">
+        <p>Id: <input required type="text" name="parts[id]" placeholder="ID"></p>
+        <input type="submit" value="Destroy Part">
+        </form>
+      </li>
+    </ul>
   </div>
-  <!-- <button type="button" name="button" id="get-collections">Collections</button> -->
-    <div class="collection-content">
-    </div>
-</aside>
+</section>
 
 
-<div class="parts hidden">
+<div class="inventory hidden">
   <div class="row">
   <h3>Inventory</h3>
   </div>
@@ -145,7 +179,6 @@
 </div>
 
 
-  <footer></footer>
 
 </body>
 </html>

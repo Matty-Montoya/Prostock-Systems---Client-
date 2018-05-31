@@ -21,32 +21,45 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
   width:95%;
   height:85vh;
   margin: 0 auto;
-  overflow-y: scroll;
+}
+
+.create-tab {
+  padding-top: 10px;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .content-box{
   border: 1px solid rgba(0, 0, 0, .4);
   background: white;
   width: 10px;
-  height: 450px;
+  height: 350px;
+  margin: 0 auto;
   overflow-y: scroll;
-  // z-index: 1000;
   transition: .7s ease;
   position: fixed;
   margin-top: 25px;
+  text-align: center;
 }
 
 .content-box:hover{
-  width:350px;
+  width:550px;
   box-shadow: 1px 1px 30px rgba(0, 0, 0, .5);
   transition: .7s ease;
 }
 
 .part-content {
+  width: 80vw;
+  height: 75vh;
   border: 1px solid black;
   text-align: center;
+  margin: 0 auto;
+  overflow-y: scroll;
 }
 
+.inventory {
+  text-align: center;
+}
 .box{
   width: 25vw;
   height: 25vh;

@@ -32,7 +32,7 @@ const signInSuccess = function (data) {
   $('input[type=password]').val('')
   $('.status').removeClass('hidden')
   $('.content-box').removeClass('hidden')
-  $('.parts').removeClass('hidden')
+  $('.inventory').removeClass('hidden')
   store.user = data.user
 }
 
@@ -71,8 +71,7 @@ const signOutSuccess = function () {
   $('.content').empty()
   $('.content-box').addClass('hidden')
   $('.jumbotron').removeClass('hidden')
-  $('.content-box').addClass('hidden')
-  $('.parts').addClass('hidden')
+  $('.inventory').addClass('hidden')
   store.user = null
 }
 
