@@ -34,6 +34,7 @@ const signInSuccess = function (data) {
   $('.content-box').removeClass('hidden')
   $('.inventory').removeClass('hidden')
   store.user = data.user
+  console.log(store.user)
 }
 
 const signInFailure = function () {

@@ -5,7 +5,7 @@ const api = require('./api')
 const ui = require('./ui')
 
 const addHandlers = () => {
-  $('#sign-in').on('submit', onGetParts)
+  // $('#sign-in').on('submit', onGetParts)
   $('#create-part').on('submit', onCreatePart)
   $('#update-part').on('submit', onUpdatePart)
   $('#create-inventory').on('click', function () {
@@ -24,6 +24,8 @@ const addHandlers = () => {
     $('#update-part').addClass('hidden')
   })
   $('#destroy-part').on('submit', onDeletePart)
+  $('.part-content').on('submit', '.update-part', onUpdatePart)
+  $('.part-content').on('click', '.destroy-id', onDeletePart)
 }
 
 const onCreatePart = (event) => {
@@ -34,8 +36,7 @@ const onCreatePart = (event) => {
     .then(() => onGetParts(event))
 }
 
-const onGetParts = (event) => {
-  event.preventDefault()
+const onGetParts = () => {
   api.getParts()
     .then(ui.getPartsSuccess)
 }
@@ -43,17 +44,27 @@ const onGetParts = (event) => {
 const onUpdatePart = (event) => {
   event.preventDefault()
   const data = getFormFields(event.target)
+  const partId = $(event.target).closest('div').attr('data-id')
   console.log(data)
-  api.updateParts(data)
+  console.log(data)
+  api.updateParts(data, partId)
+    .then(function () {
+      console.log()
+      console.log(partId)
+    })
     .then(ui.getUpdateSuccess)
 }
 
 const onDeletePart = (event) => {
+  console.log('hello')
   event.preventDefault()
-  const data = getFormFields(event.target)
-  api.destroyParts(data)
+  const partId = $(event.target).closest('button').attr('data-id')
+  api.destroyParts(partId)
+    .then(ui.deletePartSuccess)
+    .then(() => onGetParts())
 }
 
 module.exports = {
-  addHandlers
+  addHandlers,
+  onGetParts
 }

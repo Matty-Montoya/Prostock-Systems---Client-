@@ -1,6 +1,7 @@
 const showPartTemplate = require('../templates/part.handlebars')
 
 const getPartsSuccess = function (data) {
+  console.log(data)
   const showPartHTML = showPartTemplate({parts: data.parts})
   $('.part-content').html(showPartHTML)
 }
@@ -15,7 +16,13 @@ const updatePartSuccess = function () {
 
 }
 
+const deletePartSuccess = function () {
+
+}
+
 module.exports = {
   getPartsSuccess,
-  createPartSuccess
+  createPartSuccess,
+  updatePartSuccess,
+  deletePartSuccess
 }

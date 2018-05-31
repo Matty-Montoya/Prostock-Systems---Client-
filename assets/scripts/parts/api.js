@@ -15,34 +15,34 @@ const createPart = function (data) {
   })
 }
 
-const getParts = function () {
+const getParts = function (data) {
+  console.log(data)
   return $.ajax({
     url: config.apiUrl + '/parts',
     method: 'GET',
     headers: {
-      contentType: 'application/json'
-      // Authorization: `Token token=${store.user.token}`
+      contentType: 'application/json',
+      Authorization: 'Token token=' + store.user.token
     }
   })
 }
 
-const updateParts = function (data) {
-  console.log('data is'.data)
+const updateParts = function (data, partId) {
+  console.log(store.user)
   return $.ajax({
-    url: config.apiUrl + '/parts/:id',
+    url: config.apiUrl + '/parts/' + partId,
     method: 'PATCH',
     headers: {
       contentType: 'application/json',
-      Authorization: `Token toekn=${store.user.token}`
+      Authorization: `Token token=${store.user.token}`
     },
     data
   })
 }
 
-const destroyParts = function (data) {
-  console.log(data)
+const destroyParts = function (partId) {
   return $.ajax({
-    url: config.apiUrl + '/parts/:id',
+    url: config.apiUrl + '/parts/' + partId,
     method: 'DELETE',
     headers: {
       contentType: 'application/json',

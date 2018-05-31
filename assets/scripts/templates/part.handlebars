@@ -30,6 +30,32 @@
       No Quantity Provided
     {{/if}}
     </p>
+
+      <input type="button" class="btn classic" data-id="{{part.id}}" data-toggle="modal" data-target="#updateModal" name="Update" id="update-id" value="Update">
+
+    <!--Begin Update Modal -->
+    <div class="modal" id="updateModal"  tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Update Part</h4>
+          </div>
+        <div class="modal-body" data-id="{{part.id}}">
+          <form class="update-part" data-id="{{part.id}}">
+            <p>Name: <input required type="text" name="part[name]" placeholder="Part Name"> </p>
+            <p>Description: <input required type="text" name="part[description]" placeholder="Description"> </p>
+            <p>SKU: <input required type="text" name="part[sku]" placeholder="SKU"> </p>
+            <p>Quantity: <input required type="text" name="part[quantity]" placeholder="Quantity"> </p>
+            <input type="submit" data-id="{{part.id}}" name="submit" value="Update Instrument">
+          </form>
+        </div>
+    </div>
+  </div>
+</div>
+<!--End of Update Modal   -->
+    <button type="button" class="btn classic destroy-id" data-id="{{part.id}}" name="Remove">Remove</button>
+
     </div>
     <hr>
     {{/each}}

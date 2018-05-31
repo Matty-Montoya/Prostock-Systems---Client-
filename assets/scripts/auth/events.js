@@ -1,6 +1,7 @@
 const getFormFields = require('../../../lib/get-form-fields')
 const api = require('./api')
 const ui = require('./ui')
+const partEvents =  require('../parts/events')
 
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp)
@@ -24,6 +25,7 @@ const onSignIn = function (event) {
   document.getElementById('sign-in').reset()
   api.signIn(data)
     .then(ui.signInSuccess)
+    .then(() => partEvents.onGetParts())
     .catch(ui.signInFailure)
 }
 
