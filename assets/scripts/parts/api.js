@@ -16,7 +16,6 @@ const createPart = function (data) {
 }
 
 const getParts = function (data) {
-  console.log(data)
   return $.ajax({
     url: config.apiUrl + '/parts',
     method: 'GET',

@@ -32,27 +32,30 @@ const onCreatePart = (event) => {
   event.preventDefault()
   const data = getFormFields(event.target)
   api.createPart(data)
-    .then(ui.createPartSuccess)
-    .then(() => onGetParts(event))
+    .then(ui.getCreatePartSuccess)
+    .then(() => onLoadParts(event))
+    .catch(ui.getCreatePartFailure)
 }
 
-const onGetParts = () => {
+const onLoadParts = (event) => {
+  api.getParts()
+    .then(ui.loadPartSuccess)
+}
+
+const onGetParts = (event) => {
   api.getParts()
     .then(ui.getPartsSuccess)
+    .then(ui.getPartsFailure)
 }
 
 const onUpdatePart = (event) => {
   event.preventDefault()
   const data = getFormFields(event.target)
   const partId = $(event.target).closest('div').attr('data-id')
-  console.log(data)
-  console.log(data)
   api.updateParts(data, partId)
-    .then(function () {
-      console.log()
-      console.log(partId)
-    })
-    .then(ui.getUpdateSuccess)
+    .then(ui.getUpdatePartSuccess)
+    .then(() => onLoadParts())
+    .catch(ui.getUpdatePartFailure)
 }
 
 const onDeletePart = (event) => {
@@ -60,8 +63,9 @@ const onDeletePart = (event) => {
   event.preventDefault()
   const partId = $(event.target).closest('button').attr('data-id')
   api.destroyParts(partId)
-    .then(ui.deletePartSuccess)
-    .then(() => onGetParts())
+    .then(ui.getDeletePartSuccess)
+    .then(() => onLoadParts())
+    .catch(ui.getDeletePartFailure)
 }
 
 module.exports = {
