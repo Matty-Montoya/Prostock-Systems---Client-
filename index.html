@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>[Pro]Stock Systems</title>
+      <title>Pro[Stock] Systems</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
+      <!--Links Tags To Fonts  -->
       <link href="https://fonts.googleapis.com/css?family=Coda+Caption:800" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Coda" rel="stylesheet">
+
       <!-- Do not add `link` tags-->
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
@@ -135,9 +138,12 @@
     </div>
   </div>
 
+  <div class="load-content">
+
+  </div>
+
 <section>
-  <div class="row content-box hidden"
-    <div class="">
+  <div class="row content-box hidden">
       <h3 class="coda">Inventory Controls</h3>
       <hr>
       <ul class="nav nav-tabs">
@@ -148,7 +154,7 @@
                 <p>Name: <input required type="text" name="part[name]" placeholder="Part Name"> </p>
                 <p>Description: <input required type="text" name="part[description]" placeholder="Description"> </p>
                 <p>SKU: <input required type="text" name="part[sku]" placeholder="SKU"> </p>
-                <p>Quantity: <input required type="text" name="part[quantity]" placeholder="Quantity (Ex: 34, 500, -2)"> </p>
+                <p>Quantity: <input required type="number" name="part[quantity]" min="1" max="9999999" placeholder="1,2,3"> </p>
                 <br>
                 <input type="submit" value="Create Part">
             </form>

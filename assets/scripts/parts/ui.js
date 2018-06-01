@@ -25,6 +25,7 @@ const getPartsFailure = function (data) {
 
 const getCreatePartSuccess = function () {
   $('input[type=text]').val('')
+  $('input[type=number]').val('')
   $('.status2').text('Successfully created new part in inventory!')
   setTimeout(() => $('.status2').text(''), 3000)
 }
@@ -36,6 +37,7 @@ const getCreatePartFailure = function () {
 
 const getUpdatePartSuccess = function () {
   $('input[type=text]').val('')
+  $('input[type=number]').val('')
   $('#updateModal').modal('toggle')
   $('.status2').text('Successfully updated your inventory part!')
   setTimeout(() => $('.status2').text(''), 3000)

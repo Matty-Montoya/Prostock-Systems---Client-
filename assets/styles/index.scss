@@ -1,19 +1,32 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
+$antiquewhite: #faebd7;
+$black: #000;
+$white: #fff;
+$opacity4: rgba(0, 0, 0, .4);
+$opacity5: rgba(0, 0, 0, .5);
+
+
 body {
-  background-color: antiquewhite;
+  background-color: $antiquewhite;
 }
 
-.another{
-  width: 700px;
+.another {
   height: 500px;
-  overflow-y: scroll;
   margin: 0 auto;
+  overflow-y: scroll;
+  width: 700px;
 }
 
 .brand {
   font-family: 'Coda Caption', sans-serif;
+}
+
+.box {
+  border: 1px solid $black;
+  height: 25vh;
+  width: 25vw;
 }
 
 .btn {
@@ -25,22 +38,82 @@ body {
   font-family: 'Coda Caption', sans-serif;
 }
 
+.content-box {
+  background: $white;
+  border: 1px solid $opacity4;
+  height: 350px;
+  margin: 0 auto;
+  margin-top: 25px;
+  overflow-y: scroll;
+  position: fixed;
+  text-align: center;
+  transition: .7s ease;
+  width: 20px;
+}
+
+.content-box:hover {
+  box-shadow: 1px 1px 30px $opacity5;
+  transition: .7s ease;
+  width: 550px;
+}
+
+.create-tab {
+  margin: 0 auto;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.inventory {
+  text-align: center;
+}
+
+.load-content {
+  background-image: url('img/inventory.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 75vh;
+  margin: 0 auto;
+  width: 95vw;
+}
+
 .navbar-nav {
   display: inline-flex;
+  margin-left: 10px;
   margin-top: 20px;
-  margin-left: 10px
 }
 
-.status{
+.nav-tabs > li {
+  float: none;
   text-align: center;
-  font-size: 20px;
-  height: 25px;
 }
 
-.part-status{
-  text-align: center;
+.part-status {
   font-size: 20px;
   height: 25px;
+  text-align: center;
+}
+
+.part-data {
+  margin-top: 10px;
+}
+
+.parts {
+  border: 1px solid $black;
+  height: 85vh;
+  margin: 0 auto;
+  text-align: center;
+  width: 95%;
+}
+
+
+.part-content {
+  background-color: $white;
+  border: 1px solid $black;
+  height: 75vh;
+  margin: 0 auto;
+  overflow-y: scroll;
+  text-align: center;
+  width: 80vw;
 }
 
 .row {
@@ -48,65 +121,9 @@ body {
   margin-right: 0;
 }
 
-.part-data {
-  margin-top: 10px;
-}
-
-.parts{
+.status {
+  font-size: 20px;
+  height: 25px;
   text-align: center;
-  border: 1px solid black;
-  width:95%;
-  height:85vh;
-  margin: 0 auto;
-}
-
-.create-tab {
-  padding-top: 10px;
-  text-align: center;
-  margin: 0 auto;
-}
-
-.content-box{
-  border: 1px solid rgba(0, 0, 0, .4);
-  background: white;
-  width: 20px;
-  height: 350px;
-  margin: 0 auto;
-  overflow-y: scroll;
-  transition: .7s ease;
-  position: fixed;
-  margin-top: 25px;
-  text-align: center;
-}
-
-
-.content-box:hover{
-  width:550px;
-  box-shadow: 1px 1px 30px rgba(0, 0, 0, .5);
-  transition: .7s ease;
-}
-
-.part-content {
-  width: 80vw;
-  height: 75vh;
-  border: 1px solid black;
-  background-color: white;
-  text-align: center;
-  margin: 0 auto;
-  overflow-y: scroll;
-}
-
-.inventory {
-  text-align: center;
-}
-
-.box{
-  width: 25vw;
-  height: 25vh;
-  border: 1px solid black;
-}
-
-.nav-tabs > li {
-  float: none;
-  text-align: center;
+  font-family: 'Coda', cursive;
 }

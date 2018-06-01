@@ -46,7 +46,7 @@
             <p>Name: <input required type="text" name="part[name]" placeholder="Part Name"> </p>
             <p>Description: <input required type="text" name="part[description]" placeholder="Description"> </p>
             <p>SKU: <input required type="text" name="part[sku]" placeholder="SKU"> </p>
-            <p>Quantity: <input required type="text" name="part[quantity]" placeholder="Quantity"> </p>
+            <p>Quantity: <input required type="number" name="part[quantity]" min="1" max="999999" placeholder="1,2,3"> </p>
             <input type="submit" data-id="{{part.id}}" name="submit" value="Update Part">
           </form>
         </div>

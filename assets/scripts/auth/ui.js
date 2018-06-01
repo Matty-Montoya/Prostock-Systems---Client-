@@ -33,6 +33,7 @@ const signInSuccess = function (data) {
   $('.status').removeClass('hidden')
   $('.content-box').removeClass('hidden')
   $('.inventory').removeClass('hidden')
+  $('.load-content').addClass('hidden')
   store.user = data.user
 }
 
@@ -70,8 +71,9 @@ const signOutSuccess = function () {
   $('input[type=password]').val('')
   $('.content').empty()
   $('.content-box').addClass('hidden')
-  $('.jumbotron').removeClass('hidden')
+  $('.load-content').removeClass('hidden')
   $('.inventory').addClass('hidden')
+
   store.user = null
 }
 
