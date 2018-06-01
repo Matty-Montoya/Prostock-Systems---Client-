@@ -27,7 +27,6 @@ const getParts = function (data) {
 }
 
 const updateParts = function (data, partId) {
-  console.log(store.user)
   return $.ajax({
     url: config.apiUrl + '/parts/' + partId,
     method: 'PATCH',

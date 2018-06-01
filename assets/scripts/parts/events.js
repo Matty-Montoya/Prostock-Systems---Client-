@@ -67,7 +67,6 @@ const onUpdatePart = (event) => {
 
 // onDeletePart function that links to deletePart API Call
 const onDeletePart = (event) => {
-  console.log('hello')
   event.preventDefault()
   const partId = $(event.target).closest('button').attr('data-id')
   api.destroyParts(partId)
