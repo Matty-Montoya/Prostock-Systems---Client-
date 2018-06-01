@@ -25,8 +25,7 @@ I made this application with the intent of helping my previous employer with the
   1. Fork and clone this repository.
   2. Change into a new directory.
   3. `npm install` dependencies.
-  4. `npm install ember-cli`
-  5.  Go to [`README.md`](README.md) and review information.
+  4.  Go to [`README.md`](README.md) and review information.
 ---
 ## Pro[Stock] Systems API Links
 
@@ -87,4 +86,4 @@ Some issues that I ran across while working with this project were having the us
 * In the future, I want to incorporate `Toast` or `Toastr`. These are jQuery plugins that would allow for a better notification interface.
 * CSS Styling.
 * In the Inventory Controllers, I want all forms to be nested within this div seperated by tabs using bootstrap.
-* When clicking on the update button, I want the form fields to have pre-exsisting data loaded into the input fields. 
+* When clicking on the update button, I want the form fields to have pre-exsisting data loaded into the input fields.
