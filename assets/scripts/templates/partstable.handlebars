@@ -1,0 +1,51 @@
+<table class="table table-bordered" >
+  <tr class="table-headings">
+    <th class="headings text-center">ID</th>
+    <th class="headings text-center">Name</th>
+    <th class="headings text-center">Sku</th>
+    <th class="headings text-center">Description</th>
+    <th class="headings text-center">Quantity</th>
+  </tr>
+  {{#each parts as |part|}}
+  <tr class="part-data">
+    <!--Printing Out the ID of every part  -->
+    <td data-id="{{part.id}}">
+      {{#if part.id}}
+        {{part.id}}
+      {{/if}}
+    </td>
+    <!--Printing out the Name of every part  -->
+    <td>
+      {{#if part.name}}
+        {{part.name}}
+      {{else}}
+        No Part Name Specified
+      {{/if}}
+    </td>
+    <!--Printing out the SKU of every part  -->
+    <td>
+      {{#if part.sku}}
+        {{part.sku}}
+      {{else}}
+        No SKU specified
+      {{/if}}
+    </td>
+    <!--Printing out the Description of every part  -->
+    <td>
+      {{#if part.description}}
+        {{part.description}}
+      {{else}}
+       No Description Specified
+        {{/if}}
+    </td>
+    <!--Printing out the Quatity of every part  -->
+    <td>
+      {{#if part.quantity}}
+        {{part.quantity}}
+      {{else}}
+        No Quantity Specified
+      {{/if}}
+    </td>
+  </tr>
+  {{/each}}
+</table>

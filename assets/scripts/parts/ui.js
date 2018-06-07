@@ -1,7 +1,8 @@
 const showPartTemplate = require('../templates/part.handlebars')
+const showPartTableTemplate = require('../templates/partstable.handlebars')
 
 const getPartsSuccess = function (data) {
-  const showPartHTML = showPartTemplate({parts: data.parts})
+  const showPartHTML = showPartTableTemplate({parts: data.parts})
   $('.part-content').html(showPartHTML)
   $('.status2').text('Successfully loaded your inventory!')
   setTimeout(() => $('.status2').text(''), 3000)

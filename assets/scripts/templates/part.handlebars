@@ -1,5 +1,6 @@
 
-{{#each parts as |part|}}
+
+  {{#each parts as |part|}}
    <div class="part-data">
     <p data-id="{{part.id}}"></p>
     <p> Sku:
@@ -51,14 +52,13 @@
           </form>
         </div>
         <div class="footer-status">
-
         </div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-<!--End of Update Modal   -->
+    <!--End of Update Modal   -->
     <button type="button" class="btn classic destroy-id" data-id="{{part.id}}" name="Remove">Remove</button>
 
     </div>
     <hr>
-    {{/each}}
+  {{/each}}
