@@ -23,6 +23,20 @@ body {
   font-family: 'Coda Caption', sans-serif;
 }
 
+.brand-content {
+  color: white;
+  font-family: 'Coda Caption', sans-serif;
+  font-size: 70px;
+  padding-top: 75px;
+}
+
+.brand-content-inner {
+  color: white;
+  font-family: 'Coda Caption', sans-serif;
+  font-size: 20px;
+  text-shadow: 3px 3px 15px $black;
+}
+
 .box {
   border: 1px solid $black;
   // height: 25vh;
@@ -80,12 +94,12 @@ body {
 }
 
 .load-content {
-  background-image: url('img/inventory.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('img/inventory1.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  height: 75vh;
+  height: 55vh;
   margin: 0 auto;
-  width: 95vw;
+  width: 99vw;
 }
 
 .navbar-nav {
