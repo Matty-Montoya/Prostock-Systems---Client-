@@ -24,17 +24,20 @@ body {
 }
 
 .brand-content {
-  color: white;
+  color: $white;
   font-family: 'Coda Caption', sans-serif;
   font-size: 70px;
   padding-top: 75px;
+  text-shadow: 5px 5px 20px $black;
+
 }
 
 .brand-content-inner {
-  color: white;
+  color: $white;
   font-family: 'Coda Caption', sans-serif;
   font-size: 20px;
-  text-shadow: 3px 3px 15px $black;
+  text-shadow: 5px 5px 20px $black;
+
 }
 
 .box {
@@ -72,9 +75,9 @@ body {
 }
 
 .content-box-inner {
+  margin: 0 auto;
   margin-left: 10px;
   width: 400px;
-  margin: 0 auto;
 }
 
 .create-tab {
@@ -84,13 +87,26 @@ body {
 }
 
 .headings {
-  font-size: 30px;
   background-color: lightblue;
-  color: white;
+  color: $white;
+  font-size: 30px;
 }
 
 .inventory {
   text-align: center;
+}
+
+.list {
+  color: $white;
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: 5px 5px 20px $black;
+
+}
+
+.log-in {
+  text-decoration: none;
+  color: white;
 }
 
 .load-content {
@@ -111,6 +127,10 @@ body {
 .nav-tabs > li {
   // float: none;
   text-align: center;
+}
+
+.organized-list {
+  margin-top: 50px;
 }
 
 .part-status {
@@ -148,18 +168,18 @@ body {
 }
 
 .status {
+  font-family: 'Coda', cursive;
   font-size: 20px;
   height: 25px;
   text-align: center;
-  font-family: 'Coda', cursive;
 }
 
 .submit {
-  margin-top: 10px;
   margin-left: 45%;
+  margin-top: 10px;
 }
 
 .submit-password {
-  margin-top: 10px;
   margin-left: 35%;
+  margin-top: 10px;
 }

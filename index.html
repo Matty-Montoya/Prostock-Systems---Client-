@@ -133,9 +133,18 @@
     <div class="row">
       <p class="brand-content-inner text-center">Pro[Stock] Systems is a small inventory system for local buisness owners.
         <br>
-
       </p>
-
+    </div>
+    <div class="row">
+      <div class="col-lg-12 col-sm-12 text-center organized-list">
+          <ol class="list">
+            <li class="">1. <a class="log-in" data-toggle="modal" data-target="#myModal">Log-In</a> to start tracking your inventory!</li>
+            <br>
+            <li class="">2. Create new instances of inventory or update pre-exsisting inventory!</li>
+            <br>
+            <li class="">3. Once product is no longer in stock, simply delete it from your inventory!</li>
+          </ol>
+      </div>
     </div>
 
   </div>
@@ -177,9 +186,6 @@
           <div id="update-tab" class="tab-pane fade">
             <form id="update-part">
               <p>Id: <input  type="text" name="part[id]" placeholder="ID"></p>
-              <!-- <p>Name: <input type="text" name="part[name]" placeholder="Part Name"> </p>
-              <p>Description: <input type="text" name="part[description]" placeholder="Description"> </p>
-              <p>SKU: <input type="text" name="part[sku]" placeholder="SKU"> </p> -->
               <p>Quantity: <input type="text" name="part[quantity]" min="1" max="9999999" placeholder="Quantity"> </p>
               <br>
               <input type="submit" value="Update Part">
