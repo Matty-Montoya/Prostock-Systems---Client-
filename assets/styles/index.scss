@@ -70,8 +70,9 @@ body {
 }
 
 .headings {
-  font-size: 20px;
-  text-decoration: underline;
+  font-size: 30px;
+  background-color: lightblue;
+  color: white;
 }
 
 .inventory {
@@ -137,4 +138,14 @@ body {
   height: 25px;
   text-align: center;
   font-family: 'Coda', cursive;
+}
+
+.submit {
+  margin-top: 10px;
+  margin-left: 45%;
+}
+
+.submit-password {
+  margin-top: 10px;
+  margin-left: 35%;
 }

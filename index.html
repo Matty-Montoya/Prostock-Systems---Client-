@@ -49,7 +49,7 @@
                   <form id="sign-in">
                     <input type="email" class="form-control" name="credentials[email]" placeholder="Email">
                     <input required type="password" class="form-control" name="credentials[password]" placeholder="Password">
-                    <input required type="submit" class="btn btn-default" value="Log-In">
+                    <input class="submit" required type="submit" class="btn btn-default" value="Log-In">
                   </form>
                 </div>
                 <div class="modal-footer">
@@ -72,10 +72,10 @@
                 </div>
                 <div class="modal-body">
                   <form id="sign-up">
-                    <input required type="email" name="credentials[email]" placeholder="123@example.com">
-                    <input required type="password" name="credentials[password]" placeholder="Password">
-                    <input required type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
-                    <input required type="submit" class="btn btn-default" value="Sign Up!">
+                    <input required type="email" class="form-control" name="credentials[email]" placeholder="123@example.com">
+                    <input required type="password" class="form-control" name="credentials[password]" placeholder="Password">
+                    <input required type="password" class="form-control" name="credentials[password_confirmation]" placeholder="Confirm Password">
+                    <input required class="submit" type="submit" class="btn btn-default" value="Sign Up!">
                   </form>
                 </div>
                 <div class="modal-footer">
@@ -99,9 +99,9 @@
                 </div>
                 <div class="modal-body">
                   <form id="change-password">
-                    <input required type="password" name="passwords[old]" placeholder="Old Password">
-                    <input required type="password" name="passwords[new]" placeholder="New Password">
-                    <input required type="submit" value="Change Password ">
+                    <input required type="password" class="form-control" name="passwords[old]" placeholder="Old Password">
+                    <input required type="password" class="form-control" name="passwords[new]" placeholder="New Password">
+                    <input required class="submit-password" type="submit" value="Change Password ">
                   </form>
                 </div>
                 <div class="modal-footer">
@@ -115,7 +115,7 @@
           <!--Sign Out Button Start -->
           <form id="sign-out">
             <!-- <fieldset> -->
-            <input required type="submit" class="btn btn-default hidden  sign-out" value="Sign Out">
+            <input required type="submit" class="btn btn-default hidden sign-out" value="Sign Out">
             <!-- </fieldset> -->
           </form>
           <!--Sign Out Button End  -->
@@ -188,7 +188,7 @@
 
 <div class="inventory hidden">
   <div class="row">
-  <h3 class="coda">Inventory</h3>
+  <h1 class="coda">Inventory</h1>
   </div>
   <div class="part-content">
   </div>

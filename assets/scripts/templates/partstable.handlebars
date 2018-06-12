@@ -1,11 +1,10 @@
 <table class="table table-bordered" >
   <tr class="table-headings">
     <th class="headings text-center">ID</th>
-    <th class="headings text-center">Name</th>
-    <th class="headings text-center">Sku</th>
-    <th class="headings text-center">Description</th>
-    <th class="headings text-center">Quantity</th>
-    <th class="headings text-center">Status</th>
+    <th class="headings text-center">NAME</th>
+    <th class="headings text-center">SKU</th>
+    <th class="headings text-center">DESCRIPTION</th>
+    <th class="headings text-center">QUANTITY</th>
   </tr>
   {{#each parts as |part|}}
   <tr class="part-data">
@@ -46,9 +45,6 @@
       {{else}}
         No Quantity Specified
       {{/if}}
-    </td>
-    <td>
-
     </td>
   </tr>
   {{/each}}
