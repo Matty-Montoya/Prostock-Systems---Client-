@@ -144,7 +144,12 @@
 
 <section>
   <div class="row content-box hidden">
-    <h3 class="coda">Inventory Controls</h3>
+    <ul class="nav nav-pills nav-justified">
+      <li class="active"><a data-toggle="pill" class="coda" href="#inventory-control-pill">Inventory Controls</a></li>
+      <li><a data-toggle="pill" class="coda" href="#search-pill">Search Inventory</a></li>
+    </ul>
+
+  <div id="inventory-control-pill">
     <hr>
     <div class="content-box-inner">
       <ul class="nav nav-tabs">
@@ -181,6 +186,18 @@
           </form>
         </div>
       </div>
+      </div>
+    </div>
+
+    <div id="search-pill" class="hidden">
+        <hr>
+        <h3 class="coda">Search Inventory</h3>
+        <hr>
+        <div class="search-box">
+          <form id="search-part">
+            <input required type="search" name="parts[id]" placeholder="Search"> <input type="submit" value="Search">
+          </form>
+        </div>
     </div>
   </div>
 </section>
