@@ -12,7 +12,7 @@ const getPartsSuccess = function (data) {
 }
 
 const loadPartSuccess = function (data) {
-  const showPartHTML = showPartTemplate({parts: data.parts})
+  const showPartHTML = showPartTableTemplate({parts: data.parts})
   $('.part-content').html(showPartHTML)
   if (data.parts.length === 0) {
     $('.part-content').html('<h3> You do not have any parts in your inventory</h3>')
@@ -39,7 +39,7 @@ const getCreatePartFailure = function () {
 const getUpdatePartSuccess = function () {
   $('input[type=text]').val('')
   $('input[type=number]').val('')
-  $('#updateModal').modal('toggle')
+  // $('#updateModal').modal('toggle')
   $('.status2').text('Successfully updated your inventory part!')
   setTimeout(() => $('.status2').text(''), 3000)
 }

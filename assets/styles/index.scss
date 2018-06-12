@@ -25,8 +25,8 @@ body {
 
 .box {
   border: 1px solid $black;
-  height: 25vh;
-  width: 25vw;
+  // height: 25vh;
+  // width: 25vw;
 }
 
 .btn {
@@ -41,7 +41,7 @@ body {
 .content-box {
   background: $white;
   border: 1px solid $opacity4;
-  height: 350px;
+  height: 400px;
   margin: 0 auto;
   margin-top: 25px;
   overflow-y: scroll;
@@ -54,13 +54,24 @@ body {
 .content-box:hover {
   box-shadow: 1px 1px 30px $opacity5;
   transition: .7s ease;
-  width: 550px;
+  width: 500px;
+}
+
+.content-box-inner {
+  margin-left: 10px;
+  width: 400px;
+  margin: 0 auto;
 }
 
 .create-tab {
   margin: 0 auto;
   padding-top: 10px;
   text-align: center;
+}
+
+.headings {
+  font-size: 20px;
+  text-decoration: underline;
 }
 
 .inventory {
@@ -83,7 +94,7 @@ body {
 }
 
 .nav-tabs > li {
-  float: none;
+  // float: none;
   text-align: center;
 }
 

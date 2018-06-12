@@ -58,8 +58,8 @@ const onGetParts = (event) => {
 const onUpdatePart = (event) => {
   event.preventDefault()
   const data = getFormFields(event.target)
-  const partId = $(event.target).closest('div').attr('data-id')
-  api.updateParts(data, partId)
+  // const partId = $(event.target).closest('td').attr('data-id')
+  api.updateParts(data)
     .then(ui.getUpdatePartSuccess)
     .then(() => onLoadParts())
     .catch(ui.getUpdatePartFailure)
@@ -68,8 +68,10 @@ const onUpdatePart = (event) => {
 // onDeletePart function that links to deletePart API Call
 const onDeletePart = (event) => {
   event.preventDefault()
-  const partId = $(event.target).closest('button').attr('data-id')
-  api.destroyParts(partId)
+  const data = getFormFields(event.target)
+  // const partId = $(event.target).closest('td').attr('data-id')
+  console.log(data)
+  api.destroyParts(data)
     .then(ui.getDeletePartSuccess)
     .then(() => onLoadParts())
     .catch(ui.getDeletePartFailure)

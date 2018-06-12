@@ -26,9 +26,10 @@ const getParts = function (data) {
   })
 }
 
-const updateParts = function (data, partId) {
+const updateParts = function (data) {
+  console.log(data)
   return $.ajax({
-    url: config.apiUrl + '/parts/' + partId,
+    url: config.apiUrl + '/parts/' + data.part.id,
     method: 'PATCH',
     headers: {
       contentType: 'application/json',
@@ -38,9 +39,9 @@ const updateParts = function (data, partId) {
   })
 }
 
-const destroyParts = function (partId) {
+const destroyParts = function (data) {
   return $.ajax({
-    url: config.apiUrl + '/parts/' + partId,
+    url: config.apiUrl + '/parts/' + data.parts.id,
     method: 'DELETE',
     headers: {
       contentType: 'application/json',

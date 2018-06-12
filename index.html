@@ -144,46 +144,45 @@
 
 <section>
   <div class="row content-box hidden">
-      <h3 class="coda">Inventory Controls</h3>
-      <hr>
+    <h3 class="coda">Inventory Controls</h3>
+    <hr>
+    <div class="content-box-inner">
       <ul class="nav nav-tabs">
-        <li role="presentation" class="active">
-          <a data-toggle="tab" class="coda" id="create-inventory" href="#create-tab">Create</a>
-            <div id="create-tab">
-            <form id="create-part">
-                <p>Name: <input required type="text" name="part[name]" placeholder="Part Name"> </p>
-                <p>Description: <input required type="text" name="part[description]" placeholder="Description"> </p>
-                <p>SKU: <input required type="text" name="part[sku]" placeholder="SKU"> </p>
-                <p>Quantity: <input required type="number" name="part[quantity]" min="1" max="9999999" placeholder="1,2,3"> </p>
-                <br>
-                <input type="submit" value="Create Part">
-            </form>
-          </div>
-        </li>
-      <!-- <li role="presentation">
-        <a id="update-inventory" href="#update-part">Update</a>
-          <div id="update-tab">
-            <form id="update-part" class="hidden">
-              <p>Id: <input required type="text" name="part[id]" placeholder="ID"></p>
+        <li class="active"><a data-toggle="tab" class="coda" id="create-inventory" href="#create-tab">Create</a></li>
+        <li><a data-toggle="tab" id="update-inventory" class="coda" href="#update-tab">Update</a></li>
+        <li><a data-toggle="tab" class="coda" id="destroy-inventory" href="#destroy-tab">Delete</a></li>
+      </ul>
+      <div class="tab-content">
+        <div id="create-tab" class="tab-pane fade in active">
+          <form id="create-part">
               <p>Name: <input required type="text" name="part[name]" placeholder="Part Name"> </p>
               <p>Description: <input required type="text" name="part[description]" placeholder="Description"> </p>
               <p>SKU: <input required type="text" name="part[sku]" placeholder="SKU"> </p>
-              <p>Quantity: <input required type="text" name="part[quantity]" placeholder="Quantity"> </p>
+              <p>Quantity: <input required type="number" name="part[quantity]" min="1" max="9999999" placeholder="1,2,3"> </p>
+              <br>
+              <input type="submit" value="Create Part">
+          </form>
+        </div>
+          <div id="update-tab" class="tab-pane fade">
+            <form id="update-part">
+              <p>Id: <input  type="text" name="part[id]" placeholder="ID"></p>
+              <p>Name: <input type="text" name="part[name]" placeholder="Part Name"> </p>
+              <p>Description: <input type="text" name="part[description]" placeholder="Description"> </p>
+              <p>SKU: <input type="text" name="part[sku]" placeholder="SKU"> </p>
+              <p>Quantity: <input type="text" name="part[quantity]" placeholder="Quantity"> </p>
               <br>
               <input type="submit" value="Update Part">
             </form>
           </div>
-      </li> -->
-
-      <!-- <li role="presentation">
-        <a id="destroy-inventory" href="#destroy-part">Delete</a>
-        <form id="destroy-part" class="hidden">
-        <p>Id: <input required type="text" name="parts[id]" placeholder="ID"></p>
-        <input type="submit" value="Destroy Part">
-        </form>
-      </li> -->
-      </ul>
+        <div id="destroy-tab" class="tab-pane fade">
+          <form id="destroy-part" class="hidden">
+          <p>Id: <input required type="text" name="parts[id]" placeholder="ID"></p>
+          <input type="submit" value="Destroy Part">
+          </form>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 
 
@@ -196,6 +195,9 @@
 </div>
 
 
+<footer>
+
+</footer>
 
 </body>
 </html>

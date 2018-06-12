@@ -5,6 +5,7 @@
     <th class="headings text-center">Sku</th>
     <th class="headings text-center">Description</th>
     <th class="headings text-center">Quantity</th>
+    <th class="headings text-center">Status</th>
   </tr>
   {{#each parts as |part|}}
   <tr class="part-data">
@@ -45,6 +46,9 @@
       {{else}}
         No Quantity Specified
       {{/if}}
+    </td>
+    <td>
+
     </td>
   </tr>
   {{/each}}
